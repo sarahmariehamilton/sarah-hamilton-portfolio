@@ -1,0 +1,232 @@
+/*
+ * Stylesheet for Sarah Hamilton's content design portfolio.
+ *
+ * The design aims to be polished yet playful to reflect Sarah's focus on
+ * building intuitive and engaging experiences for children. A neutral cream
+ * background paired with pastel accent colours keeps the site feeling light
+ * and approachable. Cards and sections have soft shadows and rounded
+ * corners to add depth without overwhelming the content. Responsive
+ * layouts ensure the site looks good on both desktop and mobile.
+ */
+
+/* Global resets */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Segoe UI', Tahoma, sans-serif;
+  line-height: 1.6;
+  background-color: #FDFBF8;
+  color: #333;
+  -webkit-font-smoothing: antialiased;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
+a {
+  color: #274C77;
+  text-decoration: none;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
+header {
+  background: url('images/hero.png') center/cover no-repeat;
+  min-height: 50vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 2rem;
+}
+
+header .hero-content {
+  background: rgba(255, 255, 255, 0.8);
+  padding: 2rem 3rem;
+  border-radius: 10px;
+  max-width: 800px;
+}
+
+header h1 {
+  font-size: 2.8rem;
+  margin-bottom: 0.5rem;
+  font-weight: 700;
+  color: #1C1C1C;
+}
+
+header h2 {
+  font-size: 1.4rem;
+  margin-bottom: 1rem;
+  font-weight: 400;
+  color: #333;
+}
+
+header p {
+  font-size: 1rem;
+  color: #555;
+}
+
+nav {
+  background-color: #F8F7F4;
+  padding: 1rem;
+  box-shadow: 0 2px 4px rgba(0,0,0,0.05);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+nav ul {
+  display: flex;
+  justify-content: center;
+  list-style: none;
+  gap: 2rem;
+}
+
+nav ul li a {
+  font-weight: 600;
+  transition: color 0.2s ease;
+}
+
+nav ul li a:hover {
+  color: #5271FF;
+}
+
+/* Section styles */
+section {
+  padding: 3rem 1rem;
+  max-width: 1100px;
+  margin: auto;
+}
+
+section h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #1C1C1C;
+  text-align: center;
+}
+
+/* Portfolio cards */
+.portfolio-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  background-color: #FFFFFF;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 14px rgba(0,0,0,0.12);
+}
+
+.card img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+}
+
+.card-body {
+  padding: 1.2rem;
+  flex-grow: 1;
+}
+
+.card-body h3 {
+  font-size: 1.3rem;
+  margin-bottom: 0.5rem;
+  color: #274C77;
+}
+
+.card-body p {
+  font-size: 0.95rem;
+  margin-bottom: 1rem;
+  color: #555;
+}
+
+.card-footer {
+  padding: 0 1.2rem 1.2rem 1.2rem;
+  margin-top: auto;
+}
+
+.card-footer a {
+  background-color: #274C77;
+  color: #fff;
+  padding: 0.6rem 1rem;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  display: inline-block;
+  transition: background-color 0.2s ease;
+}
+
+.card-footer a:hover {
+  background-color: #3B5BAA;
+}
+
+/* Content pages */
+.content {
+  max-width: 800px;
+  margin: auto;
+  line-height: 1.7;
+}
+
+.content h2 {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+  color: #274C77;
+}
+
+.content h3 {
+  margin-top: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: #274C77;
+  font-size: 1.2rem;
+}
+
+.content ul {
+  margin-left: 1.2rem;
+  margin-bottom: 1rem;
+  list-style: disc;
+}
+
+.content ul li {
+  margin-bottom: 0.5rem;
+}
+
+/* Footer */
+footer {
+  background-color: #F8F7F4;
+  padding: 2rem 1rem;
+  text-align: center;
+  color: #777;
+  font-size: 0.9rem;
+}
+
+footer a {
+  color: #274C77;
+  font-weight: 600;
+}
+
+@media (max-width: 600px) {
+  header h1 {
+    font-size: 2rem;
+  }
+  header h2 {
+    font-size: 1.2rem;
+  }
+}
